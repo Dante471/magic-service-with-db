@@ -33,8 +33,11 @@ public class FacultyService {
        return facultyToRemove;
     }
 
-    public Collection<Faculty> getAll() {
-        return facultyRepository.findAll();
+
+    public Collection<Faculty> getFacultiesByColor(String color) {
+        return facultyRepository.findFacultiesByColor(color);
     }
+
+
 
 }

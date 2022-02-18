@@ -5,7 +5,6 @@ import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.service.FacultyService;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/faculty")
@@ -39,9 +38,8 @@ public class FacultyController {
 
     @GetMapping("{color}")
     public Collection<Faculty> getFacultyByColor(@PathVariable String color) {
-        return facultyService.getAll().stream()
-                .filter(faculty -> faculty.getColor().equals(color))
-                .collect(Collectors.toList());
+        return facultyService.getFacultiesByColor(color);
     }
+
 
 }
