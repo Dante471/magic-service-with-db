@@ -24,7 +24,7 @@ public class StudentController {
     }
 
     @GetMapping
-    public Optional<Student> getStudent(@RequestParam Long studentId) {
+    public Student getStudent(@RequestParam Long studentId) {
         return studentService.getStudentById(studentId);
     }
 

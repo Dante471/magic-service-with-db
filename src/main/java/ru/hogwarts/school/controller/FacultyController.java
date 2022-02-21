@@ -5,6 +5,7 @@ import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.service.FacultyService;
 
 import java.util.Collection;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/faculty")
@@ -40,6 +41,5 @@ public class FacultyController {
     public Collection<Faculty> getFacultyByColor(@PathVariable String color) {
         return facultyService.getFacultiesByColor(color);
     }
-
 
 }
